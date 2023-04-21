@@ -1,0 +1,36 @@
+
+
+.header__items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__items-left{
+    width: 190px;
+}
+.menu{
+    padding-right: 15px;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items:center; 
+    }
+    &__list-item{
+        padding-left: 35px;
+        padding-right: 45px;
+    }
+    &__list-link{
+        @extend %title-menu;
+        text-align: center;
+        color: rgba(54, 56, 56, 0.9033);
+        line-height: 22;
+    }
+    &__list-link:hover{
+        mix-blend-mode: normal;
+        opacity: 0.7;
+        border-radius: 1px;
+    }
+    &__list-link-active{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
