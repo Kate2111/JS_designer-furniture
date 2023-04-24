@@ -40,11 +40,11 @@ function images() {
 
 function scripts() {
   return src([
-    'src/js/main.js'
+    'src/js/main.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(dest('dist/js'))
+    .pipe(dest('src/js'))
     .pipe(browserSync.stream())
 }
 
@@ -57,7 +57,7 @@ function styles() {
         overrideBrowserslist: ['last 10 version'],
         grid: true
       }))
-      .pipe(dest('dist/css'))
+      .pipe(dest('src/css'))
       .pipe(browserSync.stream())
 }
 

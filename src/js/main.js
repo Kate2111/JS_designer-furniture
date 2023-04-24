@@ -16,5 +16,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     openRightsideMenu();
 
+    console.log(6);
 
 })
