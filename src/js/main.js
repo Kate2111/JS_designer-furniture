@@ -16,6 +16,59 @@ window.addEventListener('DOMContentLoaded', function() {
 
     openRightsideMenu();
 
-    console.log(6);
+    function slider(sliderArr, sliderListItem, dotsItem) {
+        const slider      = document.querySelector(sliderArr),
+              sliderList  = document.querySelectorAll(sliderListItem),
+              dots        = document.querySelectorAll(dotsItem);
+ 
 
+        addDataAttribute(sliderList);
+        addClassActiveDots(dots);
+        switchDots(dots);
+        automaticSlider(slider);
+
+        function addDataAttribute(slider) {
+            for(let i = 0; i < slider.length; i++) {
+                slider[i].setAttribute('data-num', i);
+            }
+        }
+
+        function addClassActiveDots(dots, index) {
+            dots.forEach(dot => {
+                dot.classList.remove('dots__item-active')
+            });
+            //dots[index].classList.add('dots__item-active');
+        }
+
+        function switchDots(dots) {
+            dots.forEach(dot => {
+                dot.addEventListener('click', function () {
+
+                })
+            })
+        }
+
+        function automaticSlider(slider) {
+            let num = 0;
+               
+            setInterval(function() {
+                if(num == 0) {
+                    num = 815;
+                } else if (num == 815) {
+                    num = 1630;
+                } else {
+                    num = 0;
+                }
+                slider.style.transform = `translateY(-${num}px)`;
+
+            }, 5000);  
+        }
+
+        
+              //dots__item-active
+
+
+    }
+
+    slider('.top__slider', '.top__slider-item', '.dots__item');
 })
