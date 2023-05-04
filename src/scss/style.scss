@@ -337,3 +337,57 @@
         align-self: stretch;
     }
 }
+
+.block-box{
+    padding-bottom: 100px;
+    &__title{
+        color: $title;
+        @extend %title-menu;
+        font-size: 36px;
+        line-height: 51px;
+        margin-bottom: 29px;
+        text-align: center;
+        min-width: 430px; 
+    }
+    &__items{
+        display: flex;
+        gap: 30px;
+    }
+    &__img-link{
+        display: inline-block;
+        margin-bottom: 20px;
+        height: 307px;
+        width: 539px;
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+    &__links{
+        margin-bottom: 9px;
+        height: 307px;
+        width: 539px;
+    }
+    &__date, &__autor, &__theme{
+        @extend %footer-link;
+    }
+
+    &__date, &__autor {
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            height: 14px;
+            width: 1px;
+            left: 7px;
+            color: #707070;
+        }
+    }
+
+    &__item-title{
+        color: $title;
+        @extend %title-menu;
+        font-size: 24px;
+        line-height: 38px;
+    }
+}
