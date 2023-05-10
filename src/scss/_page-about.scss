@@ -1,0 +1,47 @@
+.about{
+    &__prev{
+        background-image: url(./../img/page_about/about_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 399px;
+        text-align: center;
+        padding: 160px 0;
+        margin-top: -53px;
+    }
+    &__prev-title{
+        font-size: 60px;
+        line-height: 80px;
+        color: $title;
+        @extend %title-menu;
+    }
+    &__content{
+        margin: 130px 0 40px;
+    }
+    &__title{
+        max-width: 822px;
+        font-size: 36px;
+        line-height: 60px;
+        color: $title;
+        @extend %title-menu;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #6D7278;
+            width: 200px;
+        }
+    }
+    &__text{
+        padding-left: 284px;
+        p{
+            padding-bottom: 30px;
+        }
+    }
+}
